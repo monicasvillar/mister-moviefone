@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mister Moviefone</title>
+    <style>
+        body {
+            font-family: "Playfair Display", serif;
+            background-color: #e7ebf0; /* Light Blue-Gray */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2b4f60; /* Deep Blue */
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .calendar-container {
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        .calendar {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* 7 equally spaced columns */
+            grid-auto-rows: 50px; /* Ensures consistent row height */
+            gap: 5px; /* Adds spacing between grid items */
+            margin-top: 15px;
+        }
+        .calendar-grid div {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 14px;
+            background-color: #ffffff;
+            color: #2b4f60;
+        }
+        .calendar-grid div.selected {
+            background-color: #669bbc; /* Steel Blue */
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mister Moviefone</h1>
+    </header>
+    <div class="calendar-container">
+        <div class="calendar">
+            <div class="calendar-header">
+                <button>&lt;</button>
+                <h2>Month Year</h2>
+                <button>&gt;</button>
+            </div>
+            <div class="calendar-grid"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
